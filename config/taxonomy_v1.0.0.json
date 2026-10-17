@@ -1,0 +1,66 @@
+{
+  "version": "1.0.0",
+  "name": "CVVF Video Content Taxonomy",
+  "description": "Taxonomy for classifying Chinese viral videos into production-ready categories",
+  "categories": {
+    "ai_movie": {
+      "name_vi": "Phim AI",
+      "name_zh": "AI电影/AI短剧",
+      "description": "Videos created with AI visual generation, AI sci-fi concepts, or AI trailers",
+      "keywords": [
+        "ai电影", "ai短剧", "ai短片", "ai微电影", "ai生成", "ai特效", "aigc", "ai动画", 
+        "sora", "midjourney", "kling", "pika", "runway", "luma"
+      ],
+      "priority_boost": 1.5
+    },
+    "short_film": {
+      "name_vi": "Phim ngắn",
+      "name_zh": "短片/微电影",
+      "description": "Short cinematic films, indie micro-movies, emotional or narrative short stories",
+      "keywords": ["微电影", "剧情短片", "电影解说", "独立短片", "故事短片", "反转短片", "短片", "短剧"],
+      "priority_boost": 1.0
+    },
+    "drama_series": {
+      "name_vi": "Phim bộ / Trích đoạn kịch tính",
+      "name_zh": "连续剧/网络短剧",
+      "description": "Episodic dramas, mini-dramas, cliffhanger serial clips",
+      "keywords": ["连续剧", "爽剧", "逆袭", "霸总", "剧集", "电视剧", "微短剧", "第1集", "第2集", "大结局", "高能反转"],
+      "priority_boost": 1.0
+    },
+    "comedy": {
+      "name_vi": "Hài hước / Tiểu phẩm",
+      "name_zh": "搞笑/喜剧",
+      "description": "Comedy sketches, pranks, jokes, parodies, humorous daily situations",
+      "keywords": ["搞笑", "喜剧", "沙雕", "小品", "爆笑", "段子", "整蛊", "笑死", "幽默", "搞笑日常"],
+      "priority_boost": 1.0
+    },
+    "daily_life": {
+      "name_vi": "Đời sống / Ẩm thực / Vlog",
+      "name_zh": "日常生活/美食/Vlog",
+      "description": "Daily vlogs, street food, cooking, crafts, travel, pets, rural life",
+      "keywords": ["生活", "美食", "vlog", "日常", "宠物", "做饭", "街头小吃", "农村生活", "治愈", "萌宠", "旅游"],
+      "priority_boost": 1.0
+    },
+    "knowledge": {
+      "name_vi": "Kiến thức / Công nghệ / DIY",
+      "name_zh": "知识/科技/极客DIY",
+      "description": "Educational content, science explainers, tech reviews, handmade DIY inventions",
+      "keywords": ["知识", "科普", "科技", "极客", "diy", "手工", "发明", "硬核", "实验", "数码", "计算机", "解密"],
+      "priority_boost": 1.0
+    },
+    "animation": {
+      "name_vi": "Hoạt hình / Anime",
+      "name_zh": "动画/动漫",
+      "description": "2D/3D animations, anime clips, motion comics, CGI shorts",
+      "keywords": ["动画", "动漫", "二次元", "国漫", "3d动画", "定格动画", "同人", "热血动漫"],
+      "priority_boost": 1.0
+    },
+    "other": {
+      "name_vi": "Khác",
+      "name_zh": "其他/未分类",
+      "description": "Fallback category when metadata does not match specific topics",
+      "keywords": [],
+      "priority_boost": 0.5
+    }
+  }
+}

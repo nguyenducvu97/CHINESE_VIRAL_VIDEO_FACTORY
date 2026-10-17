@@ -1,0 +1,22 @@
+# Viral Potential Scoring Configuration v1.0.0
+version: "1.0.0"
+
+# Weights for measured components (totaling 1.0)
+weights:
+  view_volume: 0.25      # Total scale of views (logarithmic scale up to 10M)
+  like_rate: 0.35        # Likes divided by views (baseline 4.0% = 50 pts)
+  share_rate: 0.25       # Shares divided by views (viral multiplier, baseline 0.5% = 50 pts)
+  comment_rate: 0.15     # Comments divided by views (community engagement, baseline 0.2% = 50 pts)
+
+# Benchmark baselines for engagement ratios
+benchmarks:
+  like_rate_baseline: 0.04      # 4%
+  share_rate_baseline: 0.005    # 0.5%
+  comment_rate_baseline: 0.002  # 0.2%
+  max_view_baseline: 10000000   # 10M views for max 100 on volume
+
+# Score qualification thresholds
+thresholds:
+  eligible_for_review: 65.0     # Score >= 65 is eligible for Vietsub/Dubbing review
+  high_potential: 80.0          # Score >= 80 indicates high viral velocity
+  min_views_required: 1000      # Minimum views required to evaluate engagement

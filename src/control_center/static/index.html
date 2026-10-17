@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CVVF Control Center — Bảng Điều Khiển Xưởng Video Trung Quốc</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/index.css">
+</head>
+<body>
+
+  <!-- Top App Navigation & Header -->
+  <header class="app-header">
+    <div class="brand-wrapper">
+      <div class="brand-logo-badge">⚡</div>
+      <div>
+        <h1 class="brand-title">CHINESE VIRAL VIDEO FACTORY</h1>
+        <div class="brand-tagline">Hệ Thống Tự Động Hóa Xử Lý Video Độc Lập — Namespace: cvvf</div>
+      </div>
+    </div>
+
+    <div class="header-stats">
+      <div class="stat-pill" id="stat-isolation">
+        <div class="pulse-dot"></div>
+        <span>Port 3080 &bull; CÁCH LY 100%</span>
+      </div>
+
+      <div class="stat-pill" id="stat-budget">
+        <span style="color: var(--text-dim);">Ngân sách:</span>
+        <strong style="color: var(--accent-emerald);">$0.00 / $0.00 USD</strong>
+      </div>
+
+      <button id="btn-trigger-discovery" class="btn-primary">
+        <span>🔍</span> Quét Video Nguồn
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="container">
+
+    <!-- Filters & Action Toolbar -->
+    <section class="control-bar">
+      <div class="filter-group">
+        <select id="filter-platform" class="select-control">
+          <option value="">Tất cả nền tảng</option>
+          <option value="bilibili">Bilibili</option>
+          <option value="douyin">Douyin</option>
+          <option value="kuaishou">Kuaishou</option>
+        </select>
+
+        <select id="filter-rights" class="select-control">
+          <option value="">Tất cả quyền sử dụng</option>
+          <option value="PENDING_VERIFICATION">Chờ xác minh</option>
+          <option value="APPROVED_BY_USER">Người dùng đã duyệt</option>
+          <option value="REJECTED">Đã từ chối</option>
+        </select>
+
+        <select id="filter-status" class="select-control">
+          <option value="">Tất cả trạng thái</option>
+          <option value="DISCOVERED">Mới phát hiện</option>
+          <option value="APPROVED_FOR_PUBLISH">Đã duyệt xử lý</option>
+          <option value="RENDERED">Đã render hoàn thiện</option>
+        </select>
+
+        <input type="text" id="search-query" class="select-control" placeholder="Tìm theo tiêu đề hoặc tác giả..." style="width: 260px;">
+      </div>
+
+      <div class="filter-group">
+        <button id="btn-refresh" class="btn-outline">
+          🔄 Làm mới
+        </button>
+      </div>
+    </section>
+
+    <!-- Discovered Videos Grid -->
+    <section id="video-grid" class="video-grid">
+      <!-- Video Cards will be injected dynamically -->
+    </section>
+
+    <!-- Operations & Audit Log Section -->
+    <section class="audit-panel" id="audit-panel">
+      <h2 class="panel-title">
+        <span>📜</span> Nhật Ký Hoạt Động & Kiểm Toán Tác Vụ
+      </h2>
+      <div style="overflow-x: auto;">
+        <table class="log-table">
+          <thead>
+            <tr>
+              <th>Thời gian (UTC)</th>
+              <th>Hành động</th>
+              <th>Mục tiêu (Target)</th>
+              <th>Trạng thái</th>
+              <th>Chi tiết thực thi</th>
+            </tr>
+          </thead>
+          <tbody id="log-table-body">
+            <!-- Audit rows dynamically inserted -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Video Details & Actions Modal -->
+  <div id="detail-modal" class="modal-overlay">
+    <div class="modal-content">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <h3 id="modal-title" style="font-size: 18px; font-weight: 700;">Chi Tiết Video & Thẩm Định Bản Quyền</h3>
+        <button id="btn-modal-close" style="background: none; border: none; color: var(--text-muted); font-size: 24px; cursor: pointer;">&times;</button>
+      </div>
+
+      <div id="modal-body">
+        <!-- Injected details -->
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
